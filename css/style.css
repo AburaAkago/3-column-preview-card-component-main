@@ -61,18 +61,16 @@ body {
     color: var(--cor-de-fundo-luxury);
 }
 
-h1,
-p {
-    color: var(--cor-da-fonte);
-}
-
 h1 {
     font-family: var(--fonte-de-titulo);
+    color: var(--cor-de-background);
+    font-size: 45px;
 }
 
 p {
     font-family: var(--fonte-de-paragrafo);
     font-size: 15px;
+    color: var(--cor-da-fonte);
 }
 
 a {
