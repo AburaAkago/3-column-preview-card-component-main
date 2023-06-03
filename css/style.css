@@ -1,0 +1,113 @@
+:root {
+    --cor-de-background: hsl(0, 0%, 95%);
+    --cor-da-fonte: hsla(0, 0%, 100%, 0.75);
+    --cor-de-fundo-sedans: hsl(31, 77%, 52%);
+    --cor-de-fundo-suvs: hsl(184, 100%, 22%);
+    --cor-de-fundo-luxury: hsl(179, 100%, 13%);
+    --fonte-de-titulo: "Big Shoulders Display";
+    --fonte-de-paragrafo: "Lexend Deca";
+}
+
+body {
+    background-color: var(--cor-de-background);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.container {
+    width: 53.125rem;
+    height: 32.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.luxury,
+.sedans,
+.suvs {
+    display: grid;
+    align-items: center;
+    padding: 44px;
+}
+
+.sedans {
+    background-color: var(--cor-de-fundo-sedans);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.botao-sedans {
+    color: var(--cor-de-fundo-sedans);
+
+}
+
+.suvs {
+    background-color: var(--cor-de-fundo-suvs);
+}
+
+.botao-suvs {
+    color: var(--cor-de-fundo-suvs);
+}
+
+.luxury {
+    background-color: var(--cor-de-fundo-luxury);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.botao-luxury {
+    color: var(--cor-de-fundo-luxury);
+}
+
+h1,
+p {
+    color: var(--cor-da-fonte);
+}
+
+h1 {
+    font-family: var(--fonte-de-titulo);
+}
+
+p {
+    font-family: var(--fonte-de-paragrafo);
+    font-size: 15px;
+}
+
+a {
+    height: 45px;
+    width: 137px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background-color: var(--cor-de-background);
+    border: none;
+    border-radius: 28px;
+    font-family: var(--fonte-de-paragrafo);
+}
+
+a:hover {
+    background-color: var(--cor-da-fonte);
+    transform: scale(1.05);
+}
+
+@media Only screen and (max-width: 800px) {
+    .container {
+        width: 16.125rem;
+        height: 80.5rem;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .sedans {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+
+    .luxury {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+}
